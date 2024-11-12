@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exclusive</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<div class="flex items-center justify-between p-4 bg-black text-white">
+    <!-- Centered Text -->
+    <header class="text-center flex-grow">
+        Summer Sale for All Swim Suits And Free Express Delivery - Off 50% Shop Now!
+    </header>
+
+    <!-- Dropdown Button on the Right -->
+    <div class="relative">
+        <button
+          id="dropdownButton"
+          onclick="toggleDropdown()"
+          class="px-4 py-2 bg-black rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex items-center"
+        >
+          <span class="text-white">English</span>
+          <svg
+            class="w-5 h-5 ml-2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+    
+        <!-- Dropdown Menu -->
+        <div
+          id="dropdownMenu"
+          class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
+        >
+          <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">English</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">German</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Spanish</a>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Header Section -->
+<div class="flex items-center justify-between p-4 bg-gray-100 text-black">
+    <!-- Big Title on the Left -->
+    <div class="text-3xl font-bold">
+        Exclusive
+    </div>
+
+    <!-- Centered Navigation Links -->
+    <nav class="flex space-x-4">
+        <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900">Sign Up</a>
+    </nav>
+
+    <!-- Search Box and Icons -->
+    <div class="flex items-center space-x-4">
+        <!-- Search Box -->
+        <div class="flex items-center border border-gray-300 rounded-md overflow-hidden">
+            <input
+              type="text"
+              placeholder="What are you looking for?"
+              class="px-4 py-2 text-gray-700 focus:outline-none"
+            />
+            <button class="px-4 bg-black text-white hover:bg-gray-700 focus:outline-none">Search</button>
+        </div>
+
+        <!-- Like and Cart Icons -->
+        <div class="flex items-center space-x-4">
+            <!-- Like Icon -->
+            <button class="p-2 rounded-full hover:bg-gray-200">
+                <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </button>
+            <!-- Cart Icon -->
+            <button class="p-2 rounded-full hover:bg-gray-200">
+                <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 4h10l1 2h5v2h-1.6l-1.74 8.07c-.22 1.01-1.13 1.93-2.19 1.93H6.33a2.234 2.234 0 01-2.19-1.67L2 6H1V4h6zm3 14a2 2 0 100 4 2 2 0 000-4zm8 0a2 2 0 100 4 2 2 0 000-4z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to Toggle Dropdown -->
+<script>
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    dropdownMenu.classList.toggle("hidden");
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener("click", (e) => {
+    const button = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    if (!button.contains(e.target)) {
+      dropdownMenu.classList.add("hidden");
+    }
+  });
+</script>
+
+
+    </header>
+    <!-- Header -->
+    <!-- Main Container -->
+<div class="flex p-4 bg-gray-50">
+    
+    <!-- Sidebar with Links -->
+    <aside class="w-1/4 pr-4">
+        <!-- Links List -->
+        <ul class="space-y-2">
+            <!-- Women’s Fashion with Side Drawer -->
+            <li>
+                <button
+                    class="w-full text-left font-semibold text-gray-700 hover:text-gray-900"
+                    onclick="toggleDrawer('womenFashionDrawer')"
+                >
+                    Women’s Fashion
+                </button>
+                <!-- Women’s Fashion Side Drawer -->
+                <div id="womenFashionDrawer" class="hidden pl-4 mt-2 space-y-1">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-gray-800">Dresses</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-gray-800">Tops</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-gray-800">Shoes</a>
+                </div>
+            </li>
+
+            <!-- Men Fashion with Side Drawer -->
+            <li>
+                <button
+                    class="w-full text-left font-semibold text-gray-700 hover:text-gray-900"
+                    onclick="toggleDrawer('menFashionDrawer')"
+                >
+                    Men’s Fashion
+                </button>
+                <!-- Men’s Fashion Side Drawer -->
+                <div id="menFashionDrawer" class="hidden pl-4 mt-2 space-y-1">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-gray-800">Shirts</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-gray-800">Jeans</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-gray-800">Jackets</a>
+                </div>
+            </li>
+
+            <!-- Other Links without Side Drawers -->
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Electronics</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Home & Lifestyle</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Medicine</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Sports & Outdoor</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Babies & Toys</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Groceries & Pets</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Health & Beauty</a></li>
+        </ul>
+    </aside>
+
+    <!-- Central Banner -->
+    <div class=" flex items-center justify-center">
+        <img src="./css/img/banner.png" alt="">
+    </div>
+</div>
+
+<!-- JavaScript for Toggle Drawer Functionality -->
+<script>
+  function toggleDrawer(drawerId) {
+    const drawer = document.getElementById(drawerId);
+    drawer.classList.toggle("hidden");
+  }
+</script>
+<p class="text-red-600">Today`s</p>
+<h2 class="text-2xl font-bold mb-4">Flash</h2>
+
+<div class="grid gap-4 p-4 md:grid-cols-2 lg:grid-cols-4">
+  <!-- Card 1 -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/joy-stick.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">HAVIT HV-G92 Gamepad</h3>
+      <p class="text-red-600 mb-4">$120</p>
+     
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/keyboard.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">AK-900 Wired Keyboard</h3>
+      <p class="text-red-600 mb-4">$960</p>
+ 
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/monitor.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">IPS LCD Gaming Monitor</h3>
+      <p class="text-red-600 mb-4">$370</p>
+
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/chair.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">S-Series Comfort Chair</h3>
+      <p class="text-red-600 mb-4">$375</p>
+     
+    </div>
+  </div>
+</div>
+
+<div class="flex justify-center bg-gray-100">
+  <button class="px-6 py-2 bg-red-600 text-white font-semibold rounded hover:bg-red-700 transition">
+    View All Products
+  </button>
+</div>
+
+<p class="text-red-600">Catagories</p>
+<h2 class="text-2xl font-bold mb-4">Brows by Catagory</h2>
+
+  <!-- Row of square product buttons with icons -->
+  <div class="flex space-x-4">
+    <!-- Phones Button -->
+    <button class="flex flex-col items-center justify-center w-24 h-24 bg-gray-200 rounded hover:bg-gray-300 transition">
+      <i class="fas fa-mobile-alt text-blue-500 text-2xl mb-1"></i>
+      <span class="text-sm font-semibold">Phones</span>
+    </button>
+
+    <!-- Computers Button -->
+    <button class="flex flex-col items-center justify-center w-24 h-24 bg-gray-200 rounded hover:bg-gray-300 transition">
+      <i class="fas fa-laptop text-green-500 text-2xl mb-1"></i>
+      <span class="text-sm font-semibold">Computers</span>
+    </button>
+
+    <!-- Smartwatch Button -->
+    <button class="flex flex-col items-center justify-center w-24 h-24 bg-gray-200 rounded hover:bg-gray-300 transition">
+      <i class="fas fa-watch text-yellow-500 text-2xl mb-1"></i>
+      <span class="text-sm font-semibold">Smartwatch</span>
+    </button>
+
+    <!-- Camera Button -->
+    <button class="flex flex-col items-center justify-center w-24 h-24 bg-gray-200 rounded hover:bg-gray-300 transition">
+      <i class="fas fa-camera text-purple-500 text-2xl mb-1"></i>
+      <span class="text-sm font-semibold">Camera</span>
+    </button>
+
+    <!-- Headphones Button -->
+    <button class="flex flex-col items-center justify-center w-24 h-24 bg-gray-200 rounded hover:bg-gray-300 transition">
+      <i class="fas fa-headphones text-red-500 text-2xl mb-1"></i>
+      <span class="text-sm font-semibold">Headphones</span>
+    </button>
+
+    <button class="flex flex-col items-center justify-center w-24 h-24 bg-gray-200 rounded hover:bg-gray-300 transition">
+      <i class="fas fa-gaming text-red-500 text-2xl mb-1"></i>
+      <span class="text-sm font-semibold">Gaming</span>
+    </button>
+  </div>
+
+  <p class="text-red-600">This Month</p>
+<h2 class="text-2xl font-bold mb-4">Best Selling Products</h2>
+
+<div class="grid gap-4 p-4 md:grid-cols-2 lg:grid-cols-4">
+  <!-- Card 1 -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/coat.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">The North Coat</h3>
+      <p class="text-red-600 mb-4">$260</p>
+     
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/gucci-bag.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">Gucci duffle bag</h3>
+      <p class="text-red-600 mb-4">$960</p>
+ 
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/RGB-liquid-CPU-cooler.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">RGB iquid-CPU cooler</h3>
+      <p class="text-red-600 mb-4">$160</p>
+
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/Small-Bookshelf.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">Small Bookshelf</h3>
+      <p class="text-red-600 mb-4">$360</p>
+     
+    </div>
+  </div>
+</div>
+ <!-- Image with Countdown Timer aligned to the left -->
+ <div class="flex justify-start w-full px-6">
+  <div class="relative w-full max-w-md">
+    <!-- Background Image -->
+    <img src='./css/img/JBL-speakerbox.png' alt="Countdown Image" class="w-full h-auto rounded-lg shadow-lg">
+    
+    <!-- Countdown Timer Overlay -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-2xl font-bold">
+      <p>Time left: <span id="countdown">03:00:00:00</span></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+// Countdown function
+function startCountdown(duration, display) {
+  let timer = duration, days, hours, minutes, seconds;
+
+  setInterval(function () {
+    days = Math.floor(timer / (60 * 60 * 24));
+    hours = Math.floor((timer % (60 * 60 * 24)) / (60 * 60));
+    minutes = Math.floor((timer % (60 * 60)) / 60);
+    seconds = Math.floor(timer % 60);
+
+    display.textContent = `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    if (--timer < 0) {
+      display.textContent = "Offer Ended";
+    }
+  }, 1000);
+}
+
+// Start countdown (3 days in seconds)
+const countdownElement = document.getElementById("countdown");
+const threeDaysInSeconds = 3 * 24 * 60 * 60;
+startCountdown(threeDaysInSeconds, countdownElement);
+</script>
+
+<p class="text-red-600">Our Products</p>
+<h2 class="text-2xl font-bold mb-4">Explore our Products</h2>
+
+<div class="grid gap-4 p-4 md:grid-cols-2 lg:grid-cols-4">
+  <!-- Card 1 -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/dog-food.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">Breed Dry Dog Food</h3>
+      <p class="text-red-600 mb-4">$100</p>
+     
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/camera.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">CANON EOS DSLR Camera</h3>
+      <p class="text-red-600 mb-4">$260</p>
+     
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/laptop.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">ASUS FHD Gaming Laptop</h3>
+      <p class="text-red-600 mb-4">$700</p>
+     
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/cream-set.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">Curiology Product-set</h3>
+      <p class="text-red-600 mb-4">$500</p>
+     
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/kid-car.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">Kids Electric Car</h3>
+      <p class="text-red-600 mb-4">$960</p>
+     
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/soccer-boots.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">Jr.Zoom Soccer Cleats</h3>
+      <p class="text-red-600 mb-4">$960</p>
+     
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/joy-stick2.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">GP11 Shooter USB Gamepad</h3>
+      <p class="text-red-600 mb-4">$660</p>
+     
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="./css/img/jacket.png" alt="">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-2">Quilted Satin Jacket</h3>
+      <p class="text-red-600 mb-4">$660</p>
+    </div>
+  </div>
+  <p class="text-red-600">Featured</p>
+  <div class="flex items-center justify-center ">
+    <button class="items-center bg-red-600 text-white font-semibold rounded hover:bg-red-700 transition">
+      View All Products
+    </button>
+  </div>
+    <img src="./css/img/women-collection.png" alt="">
+    <img src="./css/img/speakers.png" alt="">
+    <img src="./css/img/playstation5.png" alt="">
+    <img src="./css/img/perfume.png" alt="">
+
+<header>
+  <div class="flex justify-around mt-10 bg-gray-100 py-8">
+    <!-- Free and Fast Delivery Icon -->
+    <div class="flex flex-col items-center text-center space-y-2">
+      <i class="fas fa-shipping-fast text-4xl text-blue-500"></i>
+      <h3 class="text-lg font-semibold">Free and Fast Delivery</h3>
+    </div>
+  
+    <!-- 24/7 Customer Service Icon -->
+    <div class="flex flex-col items-center text-center space-y-2">
+      <i class="fas fa-headset text-4xl text-green-500"></i>
+      <h3 class="text-lg font-semibold">24/7 Customer Service</h3>
+    </div>
+  
+    <!-- Money-Back Guarantee Icon -->
+    <div class="flex flex-col items-center text-center space-y-2">
+      <i class="fas fa-undo-alt text-4xl text-red-500"></i>
+      <h3 class="text-lg font-semibold">Money-Back Guarantee</h3>
+    </div>
+  </div>
+  
+ 
+<body>
+
+</body>
+
+<footer class="bg-black text-white py-5 px-10 w-full fixed bottom-0 left-0 text-sm">
+  <div class="flex justify-between items-start flex-wrap">
+
+    <!-- First Column: Subscription Section -->
+    <div class="mb-4 flex flex-col">
+      <h2 class="text-lg font-semibold mb-1">Exclusive</h2>
+      <p class="mb-2">Subscribe, Get 10% off your first order</p>
+      <div class="flex">
+        <input type="email" placeholder="Enter your email" class="px-3 py-1 rounded-l-md text-black text-xs w-40">
+        <button class="px-3 py-1 bg-red-600 rounded-r-md text-xs font-semibold hover:bg-red-700 transition">Send</button>
+      </div>
+    </div>
+
+    <!-- Second Column: Business Information -->
+    <div class="mb-4">
+      <p class="text-xs">2601 Block 5 Doornkop 1874</p>
+      <p class="text-xs">Email: <a href="mailto:exclusive@gmail.com" class="text-red-400">exclusive@gmail.com</a></p>
+      <p class="text-xs">Phone: <a href="tel:+0736407535" class="text-red-400">0736407535</a></p>
+    </div>
+
+    <!-- Third Column: Account Links -->
+    <div class="mb-4">
+      <ul class="flex flex-col space-y-1 text-xs">
+        <li><a href="#" class="hover:underline">My Account</a></li>
+        <li><a href="#" class="hover:underline">Login/Register</a></li>
+        <li><a href="#" class="hover:underline">Cart</a></li>
+        <li><a href="#" class="hover:underline">Wishlist</a></li>
+        <li><a href="#" class="hover:underline">Shop</a></li>
+      </ul>
+    </div>
+
+    <!-- Fourth Column: Quick Links -->
+    <div class="mb-4">
+      <ul class="flex flex-col space-y-1 text-xs">
+        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+        <li><a href="#" class="hover:underline">Terms of Use</a></li>
+        <li><a href="#" class="hover:underline">FAQ</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Fifth Column: App Download & Social Media -->
+    <div class="flex flex-col items-start mb-4">
+      <h3 class="text-sm font-semibold mb-2">Download App - Save $3 for App New User</h3>
+      <div class="flex items-center space-x-3 mb-3">
+        <div class="bg-white p-1 rounded">
+          <img src="https://via.placeholder.com/60" alt="QR Code" class="w-12 h-12">
+        </div>
+        <a href="#" class="flex items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-6">
+        </a>
+        <a href="#" class="flex items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Store" class="h-6">
+        </a>
+      </div>
+      <!-- Social Media Links -->
+      <div class="flex space-x-4 mt-3">
+        <a href="#" class="hover:text-red-400"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-red-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-red-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-red-400"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>
